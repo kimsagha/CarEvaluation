@@ -11,3 +11,9 @@ This a project that aims to investigate how attributes of a car will affect its 
 
 ## Project Configuration
 * Python interpreter: Python 3.8
+
+## ATM
+* Check data in main.py
+    * Visualise data distribution
+    * Handle missing values?
+* Decide on ML algorithms run on data...

@@ -8,4 +8,8 @@ def read_data():
     print(df)
 
 
+def check_data():
+    print("checking data distribution and NaN values")
+
+
 read_data()
