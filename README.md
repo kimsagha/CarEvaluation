@@ -13,7 +13,6 @@ This a project that aims to investigate how attributes of a car will affect its 
 * Python interpreter: Python 3.8
 
 ## ATM
-* Check data in main.py
-    * Visualise data distribution
-    * Handle missing values?
-* Decide on ML algorithms run on data...
+* Handle imbalanced dataset?
+* Measure classification accuracy using one of the following metrics:
+  * https://towardsdatascience.com/10-must-know-classification-metrics-for-machine-learning-2ce3a4ad256e
