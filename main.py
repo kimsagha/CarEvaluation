@@ -25,7 +25,7 @@ def read_data():
     plt.xlabel('classes')
     plt.ylabel('frequency')
     plt.xticks(x_pos, class_names)
-    # plt.show()
+    plt.show()
 
     print('\nNumber of null values: ', df.isnull().sum().sum())
 
