@@ -12,5 +12,6 @@ This a project that aims to investigate how attributes of a car will affect its 
 ## Project Configuration
 * Python interpreter: Python 3.8
 
-## ATM
-* 
+## ML Algorithm
+* Logistic regression used for multi-variate classification problem
+* No null values but heavy class-imbalance --> F1 score used as performance metric of model
