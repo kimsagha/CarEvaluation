@@ -53,7 +53,7 @@ def run_model():
 
     # get model performance metrics
     score = c_model.score(x_test, y_test)
-    print('\nAccuracy', score)
+    print('\nAccuracy: ', score)
 
     f1_score = f1s(y_test, y_pred, average='micro')
     print('F1 score: ', f1_score)
