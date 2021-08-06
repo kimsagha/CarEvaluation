@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score as f1s
 
 global df
 
@@ -24,7 +25,7 @@ def read_data():
     plt.xlabel('classes')
     plt.ylabel('frequency')
     plt.xticks(x_pos, class_names)
-    plt.show()
+    # plt.show()
 
     print('\nNumber of null values: ', df.isnull().sum().sum())
 
@@ -44,15 +45,18 @@ def run_model():
     x_train, x_test, y_train, y_test = train_test_split(df[df.columns[:6]], df['class'], test_size=0.3, random_state=0)
 
     # create and train classification model using logistic regression algorithm
-    c_model = LogisticRegression(max_iter=500, random_state=0)
+    c_model = LogisticRegression(max_iter=500, random_state=0, C=5)
     c_model.fit(x_train, y_train)
 
     # run model
-    # predictions = c_model.predict(x_test)
+    y_pred = c_model.predict(x_test)
 
-    # get model accuracy
+    # get model performance metrics
     score = c_model.score(x_test, y_test)
-    print('score', score)
+    print('\nAccuracy', score)
+
+    f1_score = f1s(y_test, y_pred, average='micro')
+    print('F1 score: ', f1_score)
 
 
 read_data()
