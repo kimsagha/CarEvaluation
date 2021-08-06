@@ -9,14 +9,14 @@ global df
 
 
 def read_data():
-    print("Reading in data from car.data...")
+    print("Reading in data from car.data in Data folder...")
     global df
     df = pd.read_csv('Data/car.data', sep=",", header=None)
     df.columns = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
     print("Showing the first 5 data points")
     print(df.head())
 
-    print("\nChecking data distribution\n(Figure 1)")
+    print("\nChecking data distribution\n(Figure 1 --> imbalanced data)")
     class_names = df['class'].unique()
     class_counts = df['class'].value_counts()
     x_pos = np.arange(len(class_names))
